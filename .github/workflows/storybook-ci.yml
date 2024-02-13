@@ -1,0 +1,27 @@
+name: CI/CD for Storybook
+
+on:
+  push:
+    branches:
+      - storybook
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v2
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
