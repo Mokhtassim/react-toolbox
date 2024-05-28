@@ -31,7 +31,7 @@
     "lint:fix": "nx lint --fix",
     "types": "tsc --noEmit",
     "storybook": "nx storybook react-toolbox --no-open",
-    "storybook:build": "nx build-storybook react toolbox"
+    "storybook:build": "nx build-storybook react-toolbox"
   },
   "private": true,
   "devDependencies": {
@@ -51,7 +51,7 @@
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/builder-vite": "^0.2.6",
     "@storybook/core-server": "^6.5.15",
-    "@storybook/react": "^6.5.15",
+    "@storybook/react": "^6.5.16",
     "@svgr/webpack": "^6.1.2",
     "@testing-library/react": "13.4.0",
     "@types/jest": "28.1.1",
